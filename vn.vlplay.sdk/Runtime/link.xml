@@ -3,4 +3,5 @@
        types — they are reached via reflection (AndroidJavaProxy, UnitySendMessage,
        JsonUtility). -->
   <assembly fullname="VLPlay.Sdk" preserve="all" />
+  <assembly fullname="VLPlay.Sdk.Ads.Admob" preserve="all" ignoreIfMissing="1" />
 </linker>

@@ -20,8 +20,8 @@
       "package": "core",
       "variant": "Editor",
       "assembly": "VLPlay.Sdk.Editor.Guards",
-      "sha256": "c089dd7cc3a35ca1e6bf00b4032a2dd3c1b2649ac9190f2b0743892e97c9a993",
-      "bytes": 8192
+      "sha256": "034d13a5970b77897674eed6f19d86d3b0bce1b18b16c37c2a5297968934f2dd",
+      "bytes": 9216
     },
     {
       "package": "core",
@@ -48,8 +48,8 @@
       "package": "core",
       "variant": "EditorIos",
       "assembly": "VLPlay.Sdk.Editor.Guards",
-      "sha256": "c089dd7cc3a35ca1e6bf00b4032a2dd3c1b2649ac9190f2b0743892e97c9a993",
-      "bytes": 8192
+      "sha256": "034d13a5970b77897674eed6f19d86d3b0bce1b18b16c37c2a5297968934f2dd",
+      "bytes": 9216
     },
     {
       "package": "core",

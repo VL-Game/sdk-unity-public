@@ -13,6 +13,8 @@
   hash resolves the new binary distribution. Source remains private; DLLs can be decompiled.
 - Public publisher now refuses source/debug payloads. `build-binary-packages.mjs` is the partner
   packaging entry; ordinary `npm pack` of the private development tree is not a partner artifact.
+- Pass the package's linker preservation file explicitly to UnityLinker so IL2CPP High
+  retains the core bridges and optional AdMob module, including in a minimal host scene.
 
 `package.json` and `VLPlayAdsProviderManifest.CoreVersion` already say **1.6.0**: the provider seam
 below is the reason, and a module has to be able to name the first core that has it. The released
