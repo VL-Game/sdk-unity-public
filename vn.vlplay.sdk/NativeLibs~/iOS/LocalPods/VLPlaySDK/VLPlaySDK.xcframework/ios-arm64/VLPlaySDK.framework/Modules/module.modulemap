@@ -1,0 +1,11 @@
+framework module VLPlaySDK {
+  umbrella header "VLPlaySDK.h"
+  export *
+
+  module * { export * }
+}
+
+module VLPlaySDK.Swift {
+  header "VLPlaySDK-Swift.h"
+  requires objc
+}

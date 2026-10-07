@@ -1,0 +1,22 @@
+name: Binary Distribution Guard
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject implementation source and debug symbols
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -Ei '\.(cs|asmdef|pdb|mdb)(\.meta)?$'; then
+            echo 'C# implementation source/debug symbols are forbidden in this binary distribution.'
+            exit 1
+          fi
+          for package in vn.vlplay.sdk vn.vlplay.sdk.ads.admob; do
+            test -f "$package/BINARY-DISTRIBUTION.json"
+            test -f "$package/LICENSE.md"
+            test -n "$(find "$package" -name '*.dll' -print -quit)"
+          done

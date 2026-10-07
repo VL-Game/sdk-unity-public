@@ -1,0 +1,28 @@
+{
+  "name": "vn.vlplay.sdk",
+  "version": "1.6.0",
+  "displayName": "VLPlay SDK",
+  "description": "Unity wrapper for the VLPlay native SDKs (iOS + Android): auth, IAP, ads, FAB, anti-addiction, push. Thin C# bridge over the released native binaries — all business logic stays native.",
+  "unity": "2021.3",
+  "keywords": [
+    "vlplay",
+    "sdk",
+    "auth",
+    "iap",
+    "ads"
+  ],
+  "author": {
+    "name": "VL Play",
+    "email": "dev@vlplay.vn",
+    "url": "https://sdk.vlplay.vn"
+  },
+  "documentationUrl": "https://sdk.vlplay.vn",
+  "changelogUrl": "https://github.com/VL-Game/vlgame-sdk-unity/blob/main/CHANGELOG.md",
+  "samples": [
+    {
+      "displayName": "Demo",
+      "description": "Login / IAP / Ads console demo scene",
+      "path": "Samples~/Demo"
+    }
+  ]
+}

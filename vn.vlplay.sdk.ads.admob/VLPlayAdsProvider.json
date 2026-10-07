@@ -1,0 +1,16 @@
+{
+    "schemaVersion": 1,
+    "provider": "admob",
+    "moduleVersion": "0.1.0",
+    "runtimeAssembly": "VLPlay.Sdk.Ads.Admob",
+    "bootstrapType": "VLPlay.Ads.Admob.AdmobProviderBootstrap",
+    "compatibleCore": ">=1.6.0 <2.0.0",
+    "providerSpi": 1,
+    "officialPlugin": "Google Mobile Ads Unity Plugin",
+    "officialPluginVersion": "11.3.0",
+    "officialPluginSource": "https://github.com/googleads/googleads-mobile-unity/releases/tag/v11.3.0",
+    "officialPluginPackage": "GoogleMobileAds-v11.3.0.unitypackage",
+    "officialPluginSha256": "88a8591cdd350bb530cc73668356320dc9ff3e2134eb492ca6effe159739ae69",
+    "androidMinSdk": 23,
+    "iosMinVersion": "12.0"
+}

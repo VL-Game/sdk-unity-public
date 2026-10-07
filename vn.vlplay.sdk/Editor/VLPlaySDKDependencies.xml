@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- External Dependency Manager for Unity (EDM4U) manifest.
+     Android: mirror of g01-android-game/app/build.gradle — the canonical AAR
+     consumer dep list (the AAR carries no Gradle metadata, every transitive dep
+     must be declared). Keep in sync when bumping the native AAR.
+     iOS: ONLY the deps NOT statically baked into VLPlaySDK.xcframework
+     (SVProgressHUD is already inside
+     the binary — re-declaring them duplicates symbols at link). -->
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="androidx.multidex:multidex:2.0.1" />
+    <androidPackage spec="androidx.appcompat:appcompat:1.6.1" />
+    <androidPackage spec="androidx.annotation:annotation:1.7.1" />
+    <androidPackage spec="androidx.constraintlayout:constraintlayout:2.1.4" />
+    <androidPackage spec="androidx.lifecycle:lifecycle-livedata:2.7.0" />
+    <androidPackage spec="androidx.lifecycle:lifecycle-viewmodel:2.7.0" />
+    <androidPackage spec="androidx.browser:browser:1.8.0" />
+    <androidPackage spec="androidx.security:security-crypto:1.1.0-alpha06" />
+    <androidPackage spec="com.google.android.material:material:1.11.0" />
+    <androidPackage spec="com.facebook.android:facebook-android-sdk:16.3.0" />
+    <androidPackage spec="com.google.android.gms:play-services-auth:21.0.0" />
+    <androidPackage spec="com.google.android.gms:play-services-ads-identifier:18.0.1" />
+    <androidPackage spec="com.google.android.gms:play-services-appset:16.0.2" />
+    <androidPackage spec="com.android.installreferrer:installreferrer:2.2" />
+    <androidPackage spec="com.appsflyer:af-android-sdk:6.14.0" />
+    <!-- LOCKSTEP with the vendored AAR: native 1.7.0 compiles against Billing 9.1.0.
+         The AAR is prebuilt, so resolving an older line still builds green and only
+         fails when a player taps buy (8.x changed queryProductDetailsAsync). Bump this
+         whenever the vendored native bumps it. -->
+    <androidPackage spec="com.android.billingclient:billing:9.1.0" />
+    <androidPackage spec="com.onesignal:OneSignal:5.1.10" />
+    <androidPackage spec="com.google.firebase:firebase-analytics:21.5.1" />
+    <androidPackage spec="com.squareup.okhttp3:okhttp:4.12.0" />
+    <androidPackage spec="com.google.guava:guava:33.0.0-android" />
+    <androidPackage spec="com.google.code.gson:gson:2.10.1" />
+    <androidPackage spec="org.greenrobot:eventbus:3.3.1" />
+    <androidPackage spec="com.karumi:dexter:6.2.3" />
+    <!-- Both below are jcenter-era artifacts; jitpack is declared as the fallback
+         repository. Verified 2026-07-11 on a clean project: EDM4U resolves both and
+         their classes land in the APK (balloon + swipelayout present in the dex). -->
+    <androidPackage spec="com.github.skydoves:balloon:1.4.7">
+      <repositories>
+        <repository>https://jitpack.io</repository>
+      </repositories>
+    </androidPackage>
+    <androidPackage spec="com.daimajia.swipelayout:library:1.2.0">
+      <repositories>
+        <repository>https://jitpack.io</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+  <iosPods>
+    <iosPod name="FBSDKCoreKit" version="~&gt; 18.0" />
+    <iosPod name="FBSDKLoginKit" version="~&gt; 18.0" />
+    <iosPod name="FBSDKShareKit" version="~&gt; 18.0" />
+    <iosPod name="OneSignalXCFramework" version="5.5.1" />
+    <!-- Since native 1.5.0 (U-6 static split) the xcframework bakes NO vendor
+         code — these four resolve from CocoaPods like everything else. They are
+         also s.dependency of the local binary podspec; keep both lists in
+         lockstep (same trap as FBSDK/OneSignal above). -->
+    <iosPod name="AppsFlyerFramework" version="~&gt; 6.18" />
+    <iosPod name="FirebaseCore" version="~&gt; 12.12" />
+    <iosPod name="GoogleSignIn" version="~&gt; 9.1" />
+    <!-- The VLPlaySDK binary itself is a LOCAL pod (NativeLibs~/iOS/LocalPods/VLPlaySDK)
+         injected by the U1 build post-processor — a static path can't be declared
+         here because git-URL packages resolve into Library/PackageCache/<hash>. -->
+    <!-- Ad SDKs are not declared here: the ad network's official Unity plugin declares its own. -->
+  </iosPods>
+</dependencies>

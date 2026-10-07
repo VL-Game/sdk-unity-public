@@ -1,0 +1,41 @@
+{
+  "format": "precompiled-managed-plugins",
+  "compilerUnity": "2021.3.45f2",
+  "assemblies": [
+    {
+      "package": "admob",
+      "variant": "Editor",
+      "assembly": "VLPlay.Sdk.Ads.Admob",
+      "sha256": "7ab373a660de315253b1184c69f52377dbddb1fc4477ab9ee253661f39ace208",
+      "bytes": 24064
+    },
+    {
+      "package": "admob",
+      "variant": "EditorIos",
+      "assembly": "VLPlay.Sdk.Ads.Admob",
+      "sha256": "7ab373a660de315253b1184c69f52377dbddb1fc4477ab9ee253661f39ace208",
+      "bytes": 24064
+    },
+    {
+      "package": "admob",
+      "variant": "Android",
+      "assembly": "VLPlay.Sdk.Ads.Admob",
+      "sha256": "7ab373a660de315253b1184c69f52377dbddb1fc4477ab9ee253661f39ace208",
+      "bytes": 24064
+    },
+    {
+      "package": "admob",
+      "variant": "Ios",
+      "assembly": "VLPlay.Sdk.Ads.Admob",
+      "sha256": "7ab373a660de315253b1184c69f52377dbddb1fc4477ab9ee253661f39ace208",
+      "bytes": 24064
+    },
+    {
+      "package": "admob",
+      "variant": "Unsupported",
+      "assembly": "VLPlay.Sdk.Ads.Admob",
+      "sha256": "7ab373a660de315253b1184c69f52377dbddb1fc4477ab9ee253661f39ace208",
+      "bytes": 24064
+    }
+  ]
+}

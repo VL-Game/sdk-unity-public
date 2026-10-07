@@ -1,0 +1,6 @@
+<linker>
+  <!-- IL2CPP managed code stripping must not remove the bridge/proxy/callback
+       types — they are reached via reflection (AndroidJavaProxy, UnitySendMessage,
+       JsonUtility). -->
+  <assembly fullname="VLPlay.Sdk" preserve="all" />
+</linker>
