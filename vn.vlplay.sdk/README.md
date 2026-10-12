@@ -2,7 +2,7 @@
 
 Unity wrapper for the VLPlay native SDKs — auth, IAP, ads (IAA), FAB, anti-addiction (Decree 147), push. Auth, IAP, FAB, anti-addiction and push are a **thin C# bridge** over the released native binaries ([vlgame-sdk-android](https://github.com/VL-Game/vlgame-sdk-android) AAR + [vlgame-sdk-ios](https://github.com/VL-Game/vlgame-sdk-ios) xcframework). IAA is the deliberate exception from 1.6.0: the selected ad network's official Unity plugin runs mediation, while the VLPlay C# core owns reward tickets, CMS gates, reconciliation and ad events; the native ads manager stays off in every Unity build.
 
-> **Latest release: Unity 1.6.0 (2026-10-07), native 1.9.5.** AdMob module **0.1.0** uses Google Mobile Ads Unity plugin **11.3.0**. Android Release IL2CPP/R8 and unsigned iOS Release builds are verified; each game's device, OAuth, IAP and server-reward acceptance remains separate. Read [the upgrade checklist](https://sdk-docs.vlplay.vn/docs/integration/unity/upgrade-1.6.0) before replacing a 1.4.4 or 1.5.x package.
+> **Unity 1.6.1 (2026-10-12), native 1.9.5.** AdMob module **0.1.1** uses Google Mobile Ads Unity plugin **11.3.0**. Editor runtime DLLs are outside Unity's reserved `Editor` folder so ordinary game scripts can reference them; importer GUIDs are preserved. Android Release IL2CPP/R8/High and unsigned iOS Release/linkage are verified on Unity6000.0.73f1. Each game still needs its own device, OAuth, IAP and server-reward acceptance. Read [the upgrade checklist](https://sdk-docs.vlplay.vn/docs/integration/unity/upgrade-1.6.0) before replacing a 1.4.4 or 1.5.x package.
 
 > **Binary packaging revision, 2026-10-08:** partner core **1.6.0** and AdMob **0.1.0** ship precompiled C# DLLs, not implementation `.cs`, `.asmdef` or debug symbols. Native pin and public API are unchanged. Older source packages, including **1.5.1**, are withdrawn from partner distribution. Source stays in this private repository. DLLs can still be decompiled; this is not obfuscation or a credential-protection mechanism.
 
@@ -57,15 +57,15 @@ needs Git on the `PATH`:
 
 ```
 Window ▸ Package Manager ▸ + ▸ Add package from git URL…
-https://github.com/VL-Game/sdk-unity-public.git?path=/vn.vlplay.sdk#vn.vlplay.sdk/1.6.0
+https://github.com/VL-Game/sdk-unity-public.git?path=/vn.vlplay.sdk#vn.vlplay.sdk/1.6.1
 ```
 
-Or ask your VLPlay contact for `vn.vlplay.sdk-1.6.0.tgz`, drop it in the project, and point
+Or ask your VLPlay contact for `vn.vlplay.sdk-1.6.1.tgz`, drop it in the project, and point
 `manifest.json` at it:
 
 ```json
 "dependencies": {
-  "vn.vlplay.sdk": "file:../ThirdParty/vn.vlplay.sdk-1.6.0.tgz"
+  "vn.vlplay.sdk": "file:../ThirdParty/vn.vlplay.sdk-1.6.1.tgz"
 }
 ```
 
@@ -86,7 +86,7 @@ build stops being reproducible:
 
 ```
 Window ▸ Package Manager ▸ + ▸ Add package from git URL…
-https://github.com/VL-Game/vlgame-sdk-unity.git#v1.6.0
+https://github.com/VL-Game/vlgame-sdk-unity.git#v1.6.1
 ```
 
 </details>
@@ -122,7 +122,7 @@ In a Unity game the ad network's **official Unity plugin** runs mediation, behin
 
 | Network (`adsProvider`) | Official Unity plugin | VLPlay provider module |
 |---|---|---|
-| `admob` (default) | Google Mobile Ads Unity plugin **11.3.0** | `vn.vlplay.sdk.ads.admob` 0.1.0 — released with 1.6.0 (`Providers~/`, its own tarball, public git host) |
+| `admob` (default) | Google Mobile Ads Unity plugin **11.3.0** | `vn.vlplay.sdk.ads.admob` 0.1.1 — paired with 1.6.1 (`Providers~/`, its own tarball, public git host) |
 | `max` | AppLovin MAX Unity plugin **8.6.6** | `vn.vlplay.sdk.ads.max` 0.1.0 — **internal preview, not published** (no AppLovin account, never run on a device); the catalog lists no released module for partner installation |
 
 **Turn ads on (MAX — internal only until the module is released)**
@@ -180,4 +180,4 @@ The iOS UI resources need no separate step: since native v1.1.6 the xcframework 
 Verify on the binary rather than the source tree — `javap -classpath <aar>/classes.jar` for the
 Android API surface, `nm -U` + the shipped `Headers/` for the iOS selectors.
 
-Released Unity **1.6.0** pins **native v1.9.5** (iOS `5a006bd` / Android `1fc7eac`). Previous Unity 1.5.1 vendors native 1.9.2.
+Unity **1.6.1** pins **native v1.9.5** (iOS `5a006bd` / Android `1fc7eac`). Previous Unity 1.5.1 vendors native 1.9.2.

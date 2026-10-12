@@ -1,12 +1,12 @@
 {
   "format": "precompiled-managed-plugins",
-  "compilerUnity": "2021.3.45f2",
+  "compilerUnity": "6000.0.73f1",
   "assemblies": [
     {
       "package": "core",
       "variant": "Editor",
       "assembly": "VLPlay.Sdk",
-      "sha256": "6a7d011f6227f1d63d98cfa5fff689af61eae51e0610c3212a170ee2019decc9",
+      "sha256": "8a539a7c9e4d108c084822cc4aa2bc119b49b02661044402301f93ee549efb65",
       "bytes": 162304
     },
     {
@@ -34,7 +34,7 @@
       "package": "core",
       "variant": "EditorIos",
       "assembly": "VLPlay.Sdk",
-      "sha256": "b883c5a1658f86b0c0c717053fcadb401d551acb72da9312e2965dc81fcd68b1",
+      "sha256": "948d5e79ba7f760e07f6ecb5e088b8ac0ae0770e0e3fdebd679528ca69c7f2ef",
       "bytes": 162304
     },
     {

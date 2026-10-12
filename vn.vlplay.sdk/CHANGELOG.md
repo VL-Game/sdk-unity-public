@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1] — 2026-10-12
+
+- Move the Editor runtime facade and AdMob runtime DLLs out of Unity's reserved
+  `Editor` folder so ordinary game scripts in `Assembly-CSharp` can reference them.
+  Preserve the core settings migration GUID. Native binaries and public APIs are unchanged.
+  Paired with AdMob module 0.1.1; native remains 1.9.5. Published 1.6.0 packages are retained.
+
 ## [1.6.0] — 2026-10-07
 
 ### Binary distribution revision — 2026-10-08
