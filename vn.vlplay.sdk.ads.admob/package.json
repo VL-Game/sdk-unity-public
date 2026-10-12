@@ -1,11 +1,11 @@
 {
   "name": "vn.vlplay.sdk.ads.admob",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "VLPlay Ads — Google AdMob provider",
-  "description": "Google AdMob for the VLPlay Unity SDK: registers the official Google Mobile Ads Unity Plugin as the one mediation engine behind VLPlayAds. Needs vn.vlplay.sdk 1.6.0 or later.",
+  "description": "Google AdMob for the VLPlay Unity SDK: registers the official Google Mobile Ads Unity Plugin as the one mediation engine behind VLPlayAds. Needs vn.vlplay.sdk 1.6.1 or later.",
   "unity": "2021.3",
   "dependencies": {
-    "vn.vlplay.sdk": "1.6.0"
+    "vn.vlplay.sdk": "1.6.1"
   },
   "keywords": [
     "vlplay",

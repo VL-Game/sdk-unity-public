@@ -1,5 +1,7 @@
 # VLPlay Ads — Google AdMob provider (`vn.vlplay.sdk.ads.admob`)
 
+> **0.1.1 (core 1.6.1):** fixes the Editor runtime DLL location while preserving its GUID. Google plugin remains 11.3.0. Android IL2CPP/R8/High and unsigned iOS Release/linkage are verified on Unity6000.0.73f1.
+
 > **0.1.0, released with core 1.6.0 on 2026-10-07.** Device scope so far: Google test ads shown on an
 > iPhone through this module (06/10); rewarded/interstitial close, next load, resume and
 > Android are on the QA checklist in the handoff, and the rewarded-ad server confirmation
@@ -16,7 +18,7 @@ kill-switch, reward tickets, reconcile, `/ads/events`) stays in the VLPlay core.
 
 | Piece | Where it comes from |
 |---|---|
-| VLPlay core `vn.vlplay.sdk` | **1.6.0 or later** (`compatibleCore >=1.6.0 <2.0.0` — 1.6.0 is the first core with the provider seam) |
+| VLPlay core `vn.vlplay.sdk` | **1.6.1 or later** (`compatibleCore >=1.6.1 <2.0.0`; 1.6.0 introduced the provider seam) |
 | Official Google Mobile Ads Unity Plugin | **exactly** `officialPluginVersion` of `VLPlayAdsProvider.json` (11.3.0) |
 | AdMob App ID — Android **and** iOS | Assets ▸ Google Mobile Ads ▸ Settings; each platform has its own app and App ID |
 | Player Settings ▸ Android ▸ Minimum API Level | **23 or higher** — the core's own floor; this module adds none |
@@ -74,10 +76,10 @@ project that has the module but not the plugin does not compile far enough to im
    <https://github.com/googleads/googleads-mobile-unity/releases/tag/v11.3.0>. It carries External
    Dependency Manager 1.2.188; a project that already has EDM4U as a UPM package leaves that
    folder out of the import.
-3. Add the module to `Packages/manifest.json`, next to `vn.vlplay.sdk` 1.6.0+ — from the same place
-   the core came from: the `vn.vlplay.sdk.ads.admob-0.1.0.tgz` tarball next to the core tarball
-   (`"vn.vlplay.sdk.ads.admob": "file:../ThirdParty/vn.vlplay.sdk.ads.admob-0.1.0.tgz"`), the public
-   git host (`https://github.com/VL-Game/sdk-unity-public.git?path=/vn.vlplay.sdk.ads.admob#vn.vlplay.sdk.ads.admob/0.1.0`),
+3. Add the module to `Packages/manifest.json`, next to `vn.vlplay.sdk` 1.6.1+ — from the same place
+   the core came from: the `vn.vlplay.sdk.ads.admob-0.1.1.tgz` tarball next to the core tarball
+   (`"vn.vlplay.sdk.ads.admob": "file:../ThirdParty/vn.vlplay.sdk.ads.admob-0.1.1.tgz"`), the public
+   git host (`https://github.com/VL-Game/sdk-unity-public.git?path=/vn.vlplay.sdk.ads.admob#vn.vlplay.sdk.ads.admob/0.1.1`),
    or, for a VLPlay checkout, a `file:` path to this folder. Picking **AdMob (Google)** in the
    `VLPlaySettings` inspector writes that line for you.
 4. Assets ▸ Google Mobile Ads ▸ Settings: the Android and the iOS App ID.

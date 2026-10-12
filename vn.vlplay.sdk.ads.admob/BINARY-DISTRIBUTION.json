@@ -1,6 +1,6 @@
 {
   "format": "precompiled-managed-plugins",
-  "compilerUnity": "2021.3.45f2",
+  "compilerUnity": "6000.0.73f1",
   "assemblies": [
     {
       "package": "admob",

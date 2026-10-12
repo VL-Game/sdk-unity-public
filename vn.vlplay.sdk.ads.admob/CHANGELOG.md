@@ -1,5 +1,12 @@
 # Changelog — vn.vlplay.sdk.ads.admob
 
+## 0.1.1 — 2026-10-12 (with core 1.6.1)
+
+- Move the Editor runtime DLL out of Unity's reserved `Editor` folder so ordinary
+  game scripts can reference it. Preserve the existing importer GUID.
+- Require core 1.6.1 or later, which carries the matching runtime facade packaging fix.
+  Google Mobile Ads Unity plugin remains 11.3.0; no ad-provider behavior changes.
+
 ## 0.1.0 — 2026-10-07 (with core 1.6.0)
 
 - First AdMob provider module: the official Google Mobile Ads Unity Plugin **11.3.0**

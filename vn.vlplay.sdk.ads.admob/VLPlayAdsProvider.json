@@ -1,10 +1,10 @@
 {
     "schemaVersion": 1,
     "provider": "admob",
-    "moduleVersion": "0.1.0",
+    "moduleVersion": "0.1.1",
     "runtimeAssembly": "VLPlay.Sdk.Ads.Admob",
     "bootstrapType": "VLPlay.Ads.Admob.AdmobProviderBootstrap",
-    "compatibleCore": ">=1.6.0 <2.0.0",
+    "compatibleCore": ">=1.6.1 <2.0.0",
     "providerSpi": 1,
     "officialPlugin": "Google Mobile Ads Unity Plugin",
     "officialPluginVersion": "11.3.0",
