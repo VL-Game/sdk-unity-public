@@ -22,7 +22,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/Constants.h</key>
 		<data>
-		ItLLgGo0J9/be6OfCex+9qgzIMU=
+		EOYFKQorkgXCX4VHa2xPDmD9WoU=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/Global.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VIDUser.h</key>
 		<data>
-		aXLT8hSt7hswPt+FDN++MUD/W/U=
+		v5M/EsJSI+NPLLdo6prBj0d6rmI=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlayAds.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlaySDKManager.h</key>
 		<data>
-		Kqo8/vZQopUly231t3ROdOL3Vdo=
+		4lfb2qbHnfzI+UQof2T14991IgE=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlaySdkConfig.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDK</key>
 		<data>
-		LVM+nioJuxdl4wzYwOBgTXhtu4c=
+		2mibzSeMsx9RtCUpmp0E/mKA5A8=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/ErrorCode.plist</key>
 		<data>
-		R+A8XU0pJ1axLDHbzTKTiAtnvvA=
+		smvouQNCKnETvPlETqW6KWKgHKU=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/FailedTransactionHistoryCell.nib</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/LocalizableString.plist</key>
 		<data>
-		Qe43avjU9m0Zatb7l5OfY/ROSnE=
+		HU4q6LlQE7P+hjUUxKt/ckzcOpg=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/MailTableCell.nib</key>
 		<data>
@@ -786,7 +786,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/Constants.h</key>
 		<data>
-		ItLLgGo0J9/be6OfCex+9qgzIMU=
+		EOYFKQorkgXCX4VHa2xPDmD9WoU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/Global.h</key>
 		<data>
@@ -798,7 +798,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VIDUser.h</key>
 		<data>
-		aXLT8hSt7hswPt+FDN++MUD/W/U=
+		v5M/EsJSI+NPLLdo6prBj0d6rmI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlayAds.h</key>
 		<data>
@@ -854,7 +854,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlaySDKManager.h</key>
 		<data>
-		Kqo8/vZQopUly231t3ROdOL3Vdo=
+		4lfb2qbHnfzI+UQof2T14991IgE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlaySdkConfig.h</key>
 		<data>
@@ -914,7 +914,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDK</key>
 		<data>
-		jxc4w6Xlxw/5mnNM4wmYKfAMYP0=
+		kW2FxuJK6FlZXJZ2In35BA7FFYw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
 		<data>
@@ -922,7 +922,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/ErrorCode.plist</key>
 		<data>
-		R+A8XU0pJ1axLDHbzTKTiAtnvvA=
+		smvouQNCKnETvPlETqW6KWKgHKU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/FailedTransactionHistoryCell.nib</key>
 		<data>
@@ -934,7 +934,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/LocalizableString.plist</key>
 		<data>
-		Qe43avjU9m0Zatb7l5OfY/ROSnE=
+		HU4q6LlQE7P+hjUUxKt/ckzcOpg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/MailTableCell.nib</key>
 		<data>
@@ -1546,7 +1546,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		OfAbXq3eS9l834nP/akTZXGAqHQ=
+		txtkzFxXQcuAWoV4U3vKMMrYrKI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -1554,11 +1554,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		RuKD21qnBEF7+RjjM5QVYCZkOAs=
+		Kw0BMhKzk2qkUH7Ok7Dpq8wA7PU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		4Dn0nyMoouxYcftniuA2emcn2u4=
+		k8x0w5O9FDWNORG0mkvYJSbC218=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -1619,11 +1619,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ItLLgGo0J9/be6OfCex+9qgzIMU=
+			EOYFKQorkgXCX4VHa2xPDmD9WoU=
 			</data>
 			<key>hash2</key>
 			<data>
-			NpvZi4rp/bQHAI0NCShXCIBQ/UlSVZaGAaxjjK2X7sk=
+			XCvfod3cvQtYu0ih/ApSEM97Qfizi8oAqScZhZZgcDs=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/Global.h</key>
@@ -1652,11 +1652,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aXLT8hSt7hswPt+FDN++MUD/W/U=
+			v5M/EsJSI+NPLLdo6prBj0d6rmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			tdKP8a3Fh9yuBgU8hLJeNdUyHv39mtXPxKOw3h9usUQ=
+			lT0Q4tzaniffD4dVOkqPwzofZtZCQ6lwvYmutynoTsI=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlayAds.h</key>
@@ -1806,11 +1806,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Kqo8/vZQopUly231t3ROdOL3Vdo=
+			4lfb2qbHnfzI+UQof2T14991IgE=
 			</data>
 			<key>hash2</key>
 			<data>
-			mP6oYtHSIC9SepG2eE6KvvkOEX+S9F9oP+K3V5l8+vY=
+			UglKV/qJvkvVT/s58+CkioLFk+m1vXJKb9nbK79rOLU=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlaySdkConfig.h</key>
@@ -1927,11 +1927,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LVM+nioJuxdl4wzYwOBgTXhtu4c=
+			2mibzSeMsx9RtCUpmp0E/mKA5A8=
 			</data>
 			<key>hash2</key>
 			<data>
-			aYQ0p91eweXcXWUg2OoZGa44wN+11VTgU4s9GtJ3OAI=
+			q0tXb6jUEizKidsjPBVpL0AR6fImzRhECzF23FEqss8=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
@@ -1949,11 +1949,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R+A8XU0pJ1axLDHbzTKTiAtnvvA=
+			smvouQNCKnETvPlETqW6KWKgHKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			liPJ/OF5EKmDnGN4O0QkRsVtBi6QjjwItfLDLcgDt/8=
+			GyFqmvP/tWVjKjfvNjUfezrSUy0Nq+zOx53LntzpKwU=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/FailedTransactionHistoryCell.nib</key>
@@ -1982,11 +1982,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Qe43avjU9m0Zatb7l5OfY/ROSnE=
+			HU4q6LlQE7P+hjUUxKt/ckzcOpg=
 			</data>
 			<key>hash2</key>
 			<data>
-			xgZqtiPhAGAj9AFq+3JndzcRjCKcqh+YbSei/O6DTiA=
+			aNejCFBVFUw5Qm5FVeOwgjnec+3JK7VmGX2N506drao=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/MailTableCell.nib</key>
@@ -3720,11 +3720,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ItLLgGo0J9/be6OfCex+9qgzIMU=
+			EOYFKQorkgXCX4VHa2xPDmD9WoU=
 			</data>
 			<key>hash2</key>
 			<data>
-			NpvZi4rp/bQHAI0NCShXCIBQ/UlSVZaGAaxjjK2X7sk=
+			XCvfod3cvQtYu0ih/ApSEM97Qfizi8oAqScZhZZgcDs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/Global.h</key>
@@ -3753,11 +3753,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aXLT8hSt7hswPt+FDN++MUD/W/U=
+			v5M/EsJSI+NPLLdo6prBj0d6rmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			tdKP8a3Fh9yuBgU8hLJeNdUyHv39mtXPxKOw3h9usUQ=
+			lT0Q4tzaniffD4dVOkqPwzofZtZCQ6lwvYmutynoTsI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlayAds.h</key>
@@ -3907,11 +3907,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Kqo8/vZQopUly231t3ROdOL3Vdo=
+			4lfb2qbHnfzI+UQof2T14991IgE=
 			</data>
 			<key>hash2</key>
 			<data>
-			mP6oYtHSIC9SepG2eE6KvvkOEX+S9F9oP+K3V5l8+vY=
+			UglKV/qJvkvVT/s58+CkioLFk+m1vXJKb9nbK79rOLU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlaySdkConfig.h</key>
@@ -4072,11 +4072,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jxc4w6Xlxw/5mnNM4wmYKfAMYP0=
+			kW2FxuJK6FlZXJZ2In35BA7FFYw=
 			</data>
 			<key>hash2</key>
 			<data>
-			cmkApuNLKYLLQxADhbEkNHyebHGRCgI5A9YFo9JxEaU=
+			kHCuwWphstX+ippV25aixvJh4Rqktu5jJEiJx/TcalI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
@@ -4094,11 +4094,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R+A8XU0pJ1axLDHbzTKTiAtnvvA=
+			smvouQNCKnETvPlETqW6KWKgHKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			liPJ/OF5EKmDnGN4O0QkRsVtBi6QjjwItfLDLcgDt/8=
+			GyFqmvP/tWVjKjfvNjUfezrSUy0Nq+zOx53LntzpKwU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/FailedTransactionHistoryCell.nib</key>
@@ -4127,11 +4127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Qe43avjU9m0Zatb7l5OfY/ROSnE=
+			HU4q6LlQE7P+hjUUxKt/ckzcOpg=
 			</data>
 			<key>hash2</key>
 			<data>
-			xgZqtiPhAGAj9AFq+3JndzcRjCKcqh+YbSei/O6DTiA=
+			aNejCFBVFUw5Qm5FVeOwgjnec+3JK7VmGX2N506drao=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/MailTableCell.nib</key>
@@ -5810,11 +5810,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OfAbXq3eS9l834nP/akTZXGAqHQ=
+			txtkzFxXQcuAWoV4U3vKMMrYrKI=
 			</data>
 			<key>hash2</key>
 			<data>
-			/qKR5Hy5ga04WIJyR+xaKGAxBhWeuAx+JXwvFq/WDdY=
+			uOYdeC8jRL3LRbEX0NTBmOmxtG9TRwuO2yOysthTrt8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeRequirements</key>
@@ -5832,22 +5832,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RuKD21qnBEF7+RjjM5QVYCZkOAs=
+			Kw0BMhKzk2qkUH7Ok7Dpq8wA7PU=
 			</data>
 			<key>hash2</key>
 			<data>
-			vbCpu9RSCWVpMwTB8pBmYZaoCx5knvJDBBXsTOcc+gA=
+			2VY2BGgKVRIExjrxk2fRF6ulMdDtCtmRUzNrzNpSp6c=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4Dn0nyMoouxYcftniuA2emcn2u4=
+			k8x0w5O9FDWNORG0mkvYJSbC218=
 			</data>
 			<key>hash2</key>
 			<data>
-			yv+p+hmrlm5Ma86lypJxqcsRDYzv2V9tYYWg4VqHGi0=
+			fv48Tv+Wl6y0Jtjdfq2YpGIc9N8OgoDvbTvkInJLWzA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeSignature</key>

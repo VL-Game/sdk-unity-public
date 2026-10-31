@@ -1159,8 +1159,9 @@ void VLPlayUnity_AdsCheckRewardStatus(int requestId, const char* nonce) {
 
 #pragma mark - Account ops (U5-1) + FAB (U5-2)
 
-// Social bind — OAuth runs inside the SDK. provider: "google"/"facebook"/"apple"
-// (matches VLPlayBindProvider* constant values; Apple is iOS-only — Android rejects it).
+// Social bind — OAuth runs inside the SDK. provider: "google"/"facebook" (the
+// VLPlayBindProvider* values). "apple" never gets here: VLPlayAccount.BindSocial refuses it
+// (APL1 — linking an Apple account is not supported).
 void VLPlayUnity_BindSocial(int requestId, const char* provider) {
 #if VLP_HAS_SDK
     NSString* p = provider ? [NSString stringWithUTF8String:provider] : @"";
@@ -1174,8 +1175,9 @@ void VLPlayUnity_BindSocial(int requestId, const char* provider) {
 #endif
 }
 
-// Guest upgrade. A non-empty email opens the SDK's email-OTP dialog before the
-// network call; "" omits the email entirely (BE Joi rejects empty strings).
+// Guest upgrade. The native SDK checks the account holds a verified email or phone first and,
+// when it does not, has the player link one by OTP — a non-empty email is the address it links
+// (REC1). The email never goes in the upgrade body.
 void VLPlayUnity_UpgradeGuest(int requestId, const char* username, const char* password, const char* email) {
 #if VLP_HAS_SDK
     [[VLPlaySDKManager defaultManager]

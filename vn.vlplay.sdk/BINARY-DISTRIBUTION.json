@@ -6,8 +6,8 @@
       "package": "core",
       "variant": "Editor",
       "assembly": "VLPlay.Sdk",
-      "sha256": "59dfe8b34cc13e1c253bd9317ed9f690f1eb0c3fd79387b4dc538a5d636ce138",
-      "bytes": 163328
+      "sha256": "b1546a41c1c4ed593949c6d8bdd310f61fbfb609c302b09344cee118c2a1f097",
+      "bytes": 163840
     },
     {
       "package": "core",
@@ -34,8 +34,8 @@
       "package": "core",
       "variant": "EditorIos",
       "assembly": "VLPlay.Sdk",
-      "sha256": "3a8c2e788ae611cff4172f5d6e553cc25b71207c1e85977afd838e53bf13cec2",
-      "bytes": 163328
+      "sha256": "026496de6c6c01918eec369d47911973c74140aaa27390b473ae76d6c6385c3c",
+      "bytes": 163840
     },
     {
       "package": "core",
@@ -55,29 +55,29 @@
       "package": "core",
       "variant": "EditorIos",
       "assembly": "VLPlay.Sdk.Editor",
-      "sha256": "f73af30e40db24c94268e31be1b759f876684e86ac77b4eaa00911499cc675e9",
+      "sha256": "1ea1181ee442a5c341d17669098f4097ca77719af569bf47e0efbd55707d3088",
       "bytes": 37376
     },
     {
       "package": "core",
       "variant": "Android",
       "assembly": "VLPlay.Sdk",
-      "sha256": "410842022bf2184e9fc1ec2b3a936af8af5f171fa6f99f3fe420c598f361fdee",
-      "bytes": 119808
+      "sha256": "ba8d7362df82ff180b722bf394e5b168c0f730e47eb753d4147ce5c785d29a52",
+      "bytes": 120832
     },
     {
       "package": "core",
       "variant": "Ios",
       "assembly": "VLPlay.Sdk",
-      "sha256": "b0d312eed3e20ef2ed58fbcf8517e0a110c8dd327c67f69ae5320229fb1d5915",
-      "bytes": 97280
+      "sha256": "30bcfea78929c2ca3ca098da26b11394c5d26e51abb287b7da082c3312a8813b",
+      "bytes": 97792
     },
     {
       "package": "core",
       "variant": "Unsupported",
       "assembly": "VLPlay.Sdk",
-      "sha256": "4b9daccc86c4fb9a5d0f170b20c65a930991c0f4f434c3a5dbb046c15f57f336",
-      "bytes": 95232
+      "sha256": "28a405bc933942efb200c8225ee310a1b65187de6dd1fe4b225ed8cf1836ebc9",
+      "bytes": 95744
     },
     {
       "package": "core",

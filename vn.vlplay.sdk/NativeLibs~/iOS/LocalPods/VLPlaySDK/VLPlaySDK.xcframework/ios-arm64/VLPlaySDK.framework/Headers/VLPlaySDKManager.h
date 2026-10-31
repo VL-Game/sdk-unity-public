@@ -26,7 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// (Re-exported here so binary-xcframework integrators get them from the public umbrella.)
 FOUNDATION_EXPORT NSString *const VLPlayBindProviderFacebook;
 FOUNDATION_EXPORT NSString *const VLPlayBindProviderGoogle;
-FOUNDATION_EXPORT NSString *const VLPlayBindProviderApple;
+/// Linking an Apple account is not supported: the bind is refused before any screen opens
+/// (`error.userInfo[@"message"]` says so). Kept so code that names it still compiles.
+/// Signing in with Apple is unaffected.
+FOUNDATION_EXPORT NSString *const VLPlayBindProviderApple
+    __deprecated_msg("Linking an Apple account is not supported; offer Google or Facebook. Sign in with Apple is unaffected.");
 
 @protocol VLPlaySDKManagerDelegate <NSObject>
 
@@ -50,8 +54,11 @@ FOUNDATION_EXPORT NSString *const VLPlayBindProviderApple;
 
 @optional
 /*!
- @brief The access token expired and token refresh also failed. Game should show login UI.
- @note optional — SDK will still clear cached session internally.
+ @brief The backend refused (1001) the refresh token of the running session: it is over.
+        The SDK has already cleared it. Leave gameplay, clear your own state and call -signIn.
+ @note optional. Fires once per ended session. Not for a network error or a 5xx during the
+       refresh (the session is kept and the call fails as a network error), and not at launch —
+       a stored session the backend refuses during -signIn ends in the SDK's own login screen.
  */
 - (void)sdkManagerDidSessionExpire;
 
@@ -132,7 +139,8 @@ typedef NS_ENUM(NSInteger, VLPlayHUDStyle) {
 
 /// Posted when an Apple StoreKit transaction finishes (success or failure).
 /// userInfo keys: transactionId, productId, status (success|failed), optional
-/// error, and optional deliveryPending.
+/// error, optional deliveryPending, optional code (1100 / 1001, REC1) and optional
+/// chargeRetained (REC1: Apple charged, the SDK keeps the transaction — never re-charge).
 extern NSString *const VLPlaySDKPaymentDidFinishNotification;
 
 /*!
@@ -269,10 +277,11 @@ static NSInteger const kVLPlayPurchaseErrorMissingDeliveryTarget = -4;
  @brief Upgrade the currently signed-in guest account to a full account by setting a username + password.
  @param username 8–12 chars, lowercase alphanumeric only.
  @param password min 8 chars.
- @param email optional — pass nil or empty to omit.
- @param completion called with status=YES on success (VIDUser has been updated with the new accessToken, refreshToken and isGuest=NO). On failure, NSError.userInfo[@"message"] contains a localized message.
+ @param email optional. This is a recovery address to verify, not a field of the upgrade: when the account has no verified email or phone yet, the SDK sends a code to this address and binds it before upgrading. nil or empty lets the player pick an email or a phone number in the SDK's own screen.
+ @param completion called with status=YES on success (VIDUser has been updated with the new accessToken, refreshToken and isGuest=NO). On failure, NSError.userInfo[@"message"] contains a localized message; NSError.code is 1100 (RECOVERY_REQUIRED) when the player closed the recovery step without verifying an email or phone.
  @note Requires the user to be signed in as a guest (accessToken present). This is the Bearer token; never send it in the body.
- @note The upgrade is for the session signed in when this is called. If the player signs out — or anyone signs in, the same account included — before it is sent (the email-OTP modal can stay up for a while), it is not sent and the completion reports an expired session. If that happens while it is on the wire, the completion still reports success — the account is upgraded — but its session is not taken over: the player stays signed out.
+ @note Before upgrading, the SDK asks the backend whether the account can be recovered (`GET /account/contact/status`). A guest with no verified email or phone verifies one by OTP first, in a screen the SDK presents; the upgrade is sent once that succeeds.
+ @note The upgrade is for the session signed in when this is called. If the player signs out — or anyone signs in, the same account included — before it is sent (the recovery step can stay up for a while), it is not sent and the completion reports an expired session. If that happens while it is on the wire, the completion still reports success — the account is upgraded — but its session is not taken over: the player stays signed out.
  */
 - (void)upgradeGuestAccountWithUsername:(NSString *)username
                                password:(NSString *)password
@@ -300,11 +309,11 @@ static NSInteger const kVLPlayPurchaseErrorMissingDeliveryTarget = -4;
                 completion:(void (^)(BOOL status, NSError * _Nullable error))completion NS_AVAILABLE_IOS(8_0);
 
 /*!
- @brief Bind a social provider (Facebook / Google / Apple) to the currently signed-in account.
- @param provider one of the public constants declared at the top of this header:
-        `VLPlayBindProviderFacebook`, `VLPlayBindProviderGoogle`, `VLPlayBindProviderApple`.
+ @brief Bind a social provider (Facebook / Google) to the currently signed-in account.
+ @param provider `VLPlayBindProviderFacebook` or `VLPlayBindProviderGoogle`. Apple is refused
+        before any request (linking an Apple account is not supported).
  @param token provider OAuth access token obtained from the corresponding SDK
-        (FacebookSDK access token / GoogleSignIn idToken / ASAuthorizationAppleIDCredential identityToken).
+        (FacebookSDK access token / GoogleSignIn idToken).
  @param completion status=YES when the provider is successfully bound. status=NO + error on conflict
         (already bound, or this provider is bound to a different account), invalid/expired OAuth token,
         or expired session. `error.userInfo[@"message"]` contains a localized message.
@@ -317,11 +326,15 @@ static NSInteger const kVLPlayPurchaseErrorMissingDeliveryTarget = -4;
 /*!
  @brief SDK-driven social bind for the "link account" button (guest → social).
         The SDK runs the native Google / Facebook OAuth internally — the host game
-        does NOT integrate the FB / Google SDKs — then binds the resulting token to
-        the currently signed-in account via `-bindProvider:token:completion:`.
- @param provider `VLPlayBindProviderGoogle`, `VLPlayBindProviderFacebook`, or
-        `VLPlayBindProviderApple` (Apple requires iOS 13+; recommended on iOS when
-        Google/Facebook are offered, per App Store guideline 4.8).
+        does NOT integrate the FB / Google SDKs — then binds the resulting credential to
+        the currently signed-in account. Facebook follows the tracking answer: authorized →
+        the classic Graph token; refused → Facebook Limited Login with a one-time challenge
+        issued to this account, bound on its own route (errors 4110 challenge expired — retried
+        once —, 4111 not verified, 4112 Facebook unreachable). Either way the account's
+        session is replaced as on any bind.
+ @param provider `VLPlayBindProviderGoogle` or `VLPlayBindProviderFacebook`. Apple is refused
+        before any screen opens: linking an Apple account is not supported (guideline 4.8 is
+        about signing in, which keeps Apple).
  @param completion status=YES when bound; NO + error on user-cancel, OAuth failure,
         or bind failure. `error.userInfo[@"message"]` contains a localized message.
  @note Gate the button on `+isCurrentUserGuest`. End-to-end recovery (re-login by the
@@ -515,6 +528,14 @@ static NSInteger const kVLPlayPurchaseErrorMissingDeliveryTarget = -4;
        both outcomes as plain success. Prefer this entry point in new code.
        (A host that already observes `VLPlaySDKPaymentDidFinishNotification`
        reads the same value from `userInfo[@"deliveryPending"]`.)
+
+ @note REC1 (first top-up recovery): `error.code == 1100` means the backend refused to register
+       the purchase until the account has a verified email or phone. Show
+       `error.userInfo[@"message"]` as given. Without `chargeRetained` the refusal came before the
+       sheet — nothing was charged; the SDK offered the recovery bind and the player taps Buy again
+       afterwards. With `error.userInfo[@"chargeRetained"] == @YES` Apple HAS charged: the SDK keeps
+       the transaction unfinished and delivers it after the account is linked — never ask the player
+       to buy again. `error.code == 1001` means the session ended behind the recovery bind.
  */
 - (void)purchasePackageWithProductId:(NSString *)productId
                          productName:(nullable NSString *)productName

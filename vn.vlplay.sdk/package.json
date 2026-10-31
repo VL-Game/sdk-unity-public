@@ -1,8 +1,8 @@
 {
   "name": "vn.vlplay.sdk",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "displayName": "VLPlay SDK",
-  "description": "Unity wrapper for the VLPlay native SDKs (iOS + Android): auth, IAP, ads, FAB, anti-addiction, push. Thin C# bridge over the released native binaries — all business logic stays native.",
+  "description": "Unity wrapper for the VLPlay native SDKs (iOS + Android): auth, IAP, ads, FAB, anti-addiction, push. Thin C# bridge over the released native binaries \u2014 all business logic stays native.",
   "unity": "2021.3",
   "keywords": [
     "vlplay",

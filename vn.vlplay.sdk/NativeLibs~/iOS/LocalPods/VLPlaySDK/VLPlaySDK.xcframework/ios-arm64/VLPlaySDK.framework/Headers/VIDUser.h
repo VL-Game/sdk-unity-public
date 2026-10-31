@@ -31,6 +31,9 @@ typedef NS_ENUM(NSInteger, AuthenType) {
 @property (nonatomic, copy, nullable) NSString *quickPlayPassword;
 @property (nonatomic, copy, nullable) NSString *googleSignInToken;
 @property (nonatomic, copy, nullable) NSString *appleSignInToken;
+/// YES while this device holds a session (its tokens are stored). It does not mean the backend
+/// still accepts that session: -[VLPlaySDKManager signIn] checks it with the refresh token, and
+/// only -sdkManagerDidSignInWithUser: says it is good. Gate gameplay on that callback.
 @property (nonatomic) BOOL signedIn;
 @property (nonatomic, copy, nullable) NSString *accountUsingMobile;
 @property (nonatomic, copy, nullable) NSString *extend;
@@ -55,6 +58,9 @@ typedef NS_ENUM(NSInteger, AuthenType) {
 - (void)loadData:(nullable NSDictionary *)userInfo;
 - (void)resetData;
 - (NSDictionary *)exportUserInfo;
+/// SDK internal. Drops only the stored session's tokens and the signed-in flag (the session
+/// boundary moves with them) — for a launch whose refresh token the backend refused without a reason.
+- (void)vlp_dropResumeTokens;
 
 @end
 

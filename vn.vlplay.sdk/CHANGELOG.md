@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.6.3] — 2026-10-31
+
+- iOS: remove only complete duplicated static-framework linker arguments in the generated
+  Podfile hook. Names such as `MTGSDKBanner` and `MTGSDKInterstitial` are no longer
+  corrupted when removing `MTGSDK`; quoted/unquoted names and spaces/tabs are covered.
+  Re-export the iOS project with the fixed package to regenerate the hook.
+
+- `VLPlayAccount.BindSocial("apple")` is refused before any screen opens with
+  `errorCode -3` ("Linking an Apple account is not supported. Offer Google or Facebook.").
+  The backend cannot verify an Apple identity token for a bind yet, so every Apple bind
+  failed with 1071 after the player had gone through Apple's sheet. `ProviderApple` stays,
+  marked `[Obsolete]`, so code that names it still compiles. Signing in with Apple is
+  unaffected.
+- `VLPlayAccount.UpgradeGuest`: with native 1.9.8, a guest upgrades only once it holds
+  a verified email or phone. The SDK checks first and, when there is none, asks the player to
+  link one by OTP; the `email` argument is the address it links straight away and is never
+  sent in the upgrade. A refused upgrade returns `errorCode 1100`.
+
+- Vendors released native **1.9.8** (Android `c82c7af`, iOS `ff5c80b`): first top-up
+  error `1100` opens verified email/phone linking without opening the store automatically;
+  charged receipts use `reconcile-receipt` without account linking. A pending delivery must
+  not trigger a second purchase or a local grant. Native Android also emits the final login
+  event after account signup. REC1 PROD enforcement remains an independent rollout decision.
+- Carries SDK Hub producer **0.4.0** (accessors and declaring types in the public API
+  snapshot). This development tool is excluded from the distributed package.
+- AdMob module 0.1.1 is unchanged. 1.6.2 (native 1.9.6) stays available.
+
 ## [1.6.2] — 2026-10-31
 
 - Vendors the released core Android AAR and signed iOS XCFramework **1.9.6**
