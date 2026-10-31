@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //! Project version number for VLPlaySDK
 
-#define kVLPlaySDKVersionString @"1.9.5"
+#define kVLPlaySDKVersionString @"1.9.6"
 
 #ifdef DEBUG
 #define VLPlayLog(FORMAT, ...) NSLog((@"[VLPlaySDK] [%s:%d] " FORMAT), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);

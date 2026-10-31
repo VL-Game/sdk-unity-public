@@ -22,7 +22,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/Constants.h</key>
 		<data>
-		lx+9tUhJXLXuN7AXMfXPgEBCiyw=
+		ItLLgGo0J9/be6OfCex+9qgzIMU=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/Global.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlaySdkConfig.h</key>
 		<data>
-		jk6je63SvUFCSMiVw5zp5geaUJc=
+		yvSvXL93vyxYuLRclrvdfxztKHI=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlayServiceBanner.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDK</key>
 		<data>
-		4PBk3R/e7XkptQDVhYLzrTCsZVw=
+		LVM+nioJuxdl4wzYwOBgTXhtu4c=
 		</data>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
 		<data>
@@ -786,7 +786,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/Constants.h</key>
 		<data>
-		lx+9tUhJXLXuN7AXMfXPgEBCiyw=
+		ItLLgGo0J9/be6OfCex+9qgzIMU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/Global.h</key>
 		<data>
@@ -858,7 +858,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlaySdkConfig.h</key>
 		<data>
-		jk6je63SvUFCSMiVw5zp5geaUJc=
+		yvSvXL93vyxYuLRclrvdfxztKHI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlayServiceBanner.h</key>
 		<data>
@@ -914,7 +914,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDK</key>
 		<data>
-		SXHP9HPRochQkAQuJZILk62I/aI=
+		jxc4w6Xlxw/5mnNM4wmYKfAMYP0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
 		<data>
@@ -1546,7 +1546,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		UfbqmKW59g9Tt0fmBqCmP12YPdg=
+		OfAbXq3eS9l834nP/akTZXGAqHQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -1554,11 +1554,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		40iz+Eqfe4Vi3i8R4hxJ9icaqS0=
+		RuKD21qnBEF7+RjjM5QVYCZkOAs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		NY7of9RK+pLsyDK5ue9VH9RhuTM=
+		4Dn0nyMoouxYcftniuA2emcn2u4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -1619,11 +1619,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lx+9tUhJXLXuN7AXMfXPgEBCiyw=
+			ItLLgGo0J9/be6OfCex+9qgzIMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			4izIc0w7w4EB1o+qh1BWNEDmtbhNGG1bZQA7Ldv1ycA=
+			NpvZi4rp/bQHAI0NCShXCIBQ/UlSVZaGAaxjjK2X7sk=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/Global.h</key>
@@ -1817,11 +1817,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jk6je63SvUFCSMiVw5zp5geaUJc=
+			yvSvXL93vyxYuLRclrvdfxztKHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			R7J2Z7PSbtCynspsAhpSbC97+LegpnoR8M/KZP6Op4Y=
+			u15nwGw0DIRox1YU7b3mfN1VuiENR701fyumClkA6ak=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/Headers/VLPlayServiceBanner.h</key>
@@ -1927,11 +1927,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4PBk3R/e7XkptQDVhYLzrTCsZVw=
+			LVM+nioJuxdl4wzYwOBgTXhtu4c=
 			</data>
 			<key>hash2</key>
 			<data>
-			AyRE6jWwLoclmIYRRVUOtzxs/vOhNKI+ACC13RmX2So=
+			aYQ0p91eweXcXWUg2OoZGa44wN+11VTgU4s9GtJ3OAI=
 			</data>
 		</dict>
 		<key>ios-arm64/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
@@ -3720,11 +3720,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lx+9tUhJXLXuN7AXMfXPgEBCiyw=
+			ItLLgGo0J9/be6OfCex+9qgzIMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			4izIc0w7w4EB1o+qh1BWNEDmtbhNGG1bZQA7Ldv1ycA=
+			NpvZi4rp/bQHAI0NCShXCIBQ/UlSVZaGAaxjjK2X7sk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/Global.h</key>
@@ -3918,11 +3918,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jk6je63SvUFCSMiVw5zp5geaUJc=
+			yvSvXL93vyxYuLRclrvdfxztKHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			R7J2Z7PSbtCynspsAhpSbC97+LegpnoR8M/KZP6Op4Y=
+			u15nwGw0DIRox1YU7b3mfN1VuiENR701fyumClkA6ak=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/Headers/VLPlayServiceBanner.h</key>
@@ -4072,11 +4072,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SXHP9HPRochQkAQuJZILk62I/aI=
+			jxc4w6Xlxw/5mnNM4wmYKfAMYP0=
 			</data>
 			<key>hash2</key>
 			<data>
-			8XwMOFmsUDQBT/DjM4hx4SK2LdyYJurZ18tZwPO81jE=
+			cmkApuNLKYLLQxADhbEkNHyebHGRCgI5A9YFo9JxEaU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/VLPlaySDKResource.bundle/CCCD-icon@2x.png</key>
@@ -5810,11 +5810,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UfbqmKW59g9Tt0fmBqCmP12YPdg=
+			OfAbXq3eS9l834nP/akTZXGAqHQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			u8VKa5ZugpXxfcIOc9X1t0I7Kt8c+AMAOJme80GNAns=
+			/qKR5Hy5ga04WIJyR+xaKGAxBhWeuAx+JXwvFq/WDdY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeRequirements</key>
@@ -5832,22 +5832,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			40iz+Eqfe4Vi3i8R4hxJ9icaqS0=
+			RuKD21qnBEF7+RjjM5QVYCZkOAs=
 			</data>
 			<key>hash2</key>
 			<data>
-			CVY0RQGtsIW9M8FDiMqWQgjf3+qCX3EQk4sTDFEjFo4=
+			vbCpu9RSCWVpMwTB8pBmYZaoCx5knvJDBBXsTOcc+gA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NY7of9RK+pLsyDK5ue9VH9RhuTM=
+			4Dn0nyMoouxYcftniuA2emcn2u4=
 			</data>
 			<key>hash2</key>
 			<data>
-			zsGRrcVYNSelVzq8RcdCpPLOO0BNr5EtqxCPrKYZFL4=
+			yv+p+hmrlm5Ma86lypJxqcsRDYzv2V9tYYWg4VqHGi0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VLPlaySDK.framework/_CodeSignature/CodeSignature</key>

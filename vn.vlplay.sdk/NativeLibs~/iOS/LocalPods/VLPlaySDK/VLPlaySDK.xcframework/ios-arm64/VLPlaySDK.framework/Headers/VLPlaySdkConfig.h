@@ -14,6 +14,7 @@ extern NSString * const VLPlayPaymentMethodAppleIAP;     // "apple_iap"
 @interface VLPlaySdkConfig : NSObject
 
 // Top-level
+/// Compatibility accessor: server configs mirror only the iOS-specific key.
 @property (nonatomic, copy, readonly) NSString *appsflyerDevKey;
 @property (nonatomic, copy, readonly) NSString *appsflyerAppId;
 // SDKCONFIG-APPSFLYER-PER-PLATFORM (locked 2026-05-15): per-platform pair

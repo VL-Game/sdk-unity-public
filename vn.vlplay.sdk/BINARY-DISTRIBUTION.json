@@ -1,13 +1,13 @@
 {
   "format": "precompiled-managed-plugins",
-  "compilerUnity": "6000.0.73f1",
+  "compilerUnity": "6000.0.85f1",
   "assemblies": [
     {
       "package": "core",
       "variant": "Editor",
       "assembly": "VLPlay.Sdk",
-      "sha256": "8a539a7c9e4d108c084822cc4aa2bc119b49b02661044402301f93ee549efb65",
-      "bytes": 162304
+      "sha256": "59dfe8b34cc13e1c253bd9317ed9f690f1eb0c3fd79387b4dc538a5d636ce138",
+      "bytes": 163328
     },
     {
       "package": "core",
@@ -27,15 +27,15 @@
       "package": "core",
       "variant": "Editor",
       "assembly": "VLPlay.Sdk.Editor.Android",
-      "sha256": "8768aeb60099bf55200c8222055bf829ee3592d0aac299796946c101358b8fd7",
-      "bytes": 16384
+      "sha256": "3003289228026598869a1578d86fa3af818fc79a1219fadfa2cdcf0fd4320117",
+      "bytes": 16896
     },
     {
       "package": "core",
       "variant": "EditorIos",
       "assembly": "VLPlay.Sdk",
-      "sha256": "948d5e79ba7f760e07f6ecb5e088b8ac0ae0770e0e3fdebd679528ca69c7f2ef",
-      "bytes": 162304
+      "sha256": "3a8c2e788ae611cff4172f5d6e553cc25b71207c1e85977afd838e53bf13cec2",
+      "bytes": 163328
     },
     {
       "package": "core",
@@ -55,7 +55,7 @@
       "package": "core",
       "variant": "EditorIos",
       "assembly": "VLPlay.Sdk.Editor",
-      "sha256": "ba51a212792f86243b443b2870869a4126e8847b4467f8a268416c97d4aee2f1",
+      "sha256": "f73af30e40db24c94268e31be1b759f876684e86ac77b4eaa00911499cc675e9",
       "bytes": 37376
     },
     {

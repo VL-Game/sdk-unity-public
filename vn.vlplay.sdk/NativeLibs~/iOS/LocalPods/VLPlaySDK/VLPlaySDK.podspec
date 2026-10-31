@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'VLPlaySDK'
-  s.version      = '1.9.5'
+  s.version      = '1.9.6'
   s.summary      = 'VLPlaySDK core — prebuilt xcframework consumed as a binary (Unity wrapper vendored pod).'
   s.description  = <<-DESC
     Binary-distribution podspec for the core variant of VLPlaySDK, vendored inside

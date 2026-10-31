@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.6.2] — 2026-10-31
+
+- Vendors the released core Android AAR and signed iOS XCFramework **1.9.6**
+  (Android `c8efab6`, iOS `bf8a448`). The AAR's consumer ProGuard rules now keep
+  `SdkConfig` and its public methods, so `VLPlaySDK.IsFeatureEnabled()` and
+  `VLPlaySDK.GetConfigJson()` keep working in a minified (R8) Android build. Every package
+  up to 1.6.1 bundles native 1.9.5, which has no such keep: on those, add
+  `-keep class sdk.vlplay.vn.config.SdkConfig { public *; }` to `proguard-user.txt`.
+- Native 1.9.6 also sends `x-app-platform` and `x-app-version` (the game's version: Android
+  `versionName`, iOS `CFBundleShortVersionString`) on the `/sdk/config` request, and reads the
+  AppsFlyer dev key only from the platform field of that config. No public API, dependency pin
+  or minimum OS version changed. Paired with AdMob module **0.1.1** (unchanged; it declares
+  `compatibleCore >=1.6.1 <2.0.0`).
+- Guard the transitive `SdkConfig` JNI keep when validating the vendored Android AAR
+  (`tools/verify-native-bindings.sh`).
+- The Android post-processor appends `-dontwarn com.google.j2objc.annotations.**` and
+  `-dontwarn com.google.android.libraries.ads.mobile.sdk.**` to the generated
+  `proguard-unity.txt`. Unity 6000.0.73f1's ProGuard template carries `-ignorewarnings`;
+  6000.0.85f1's does not, and a Minify-on Release build then stopped at
+  `:launcher:minifyReleaseWithR8` on classes nothing ships: guava 33.0.0-android's j2objc
+  annotation (compile-only in its Gradle metadata) and the Google Mobile Ads plugin's Next-Gen
+  wrappers. Both rules are `-dontwarn` only. On 1.6.1 and earlier with a newer Editor, add the
+  two lines to `proguard-user.txt`.
+- The iOS post-processor's Podfile hook raises every Pod target whose deployment target is
+  below iOS 15.0 to 15.0, matching on the value; a pod that needs more keeps it. Up to 1.6.1 it
+  raised a list of VLPlaySDK dependency names, which missed `FBSDKCoreKit_Basics` and the Google
+  Mobile Ads / UMP pods and their two resource-bundle targets, all still at 12.0. Xcode 27's
+  iPhoneOS SDK accepts nothing below 15.0, so an iOS build on 1.6.1 or earlier fails in the
+  Pods project with `The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 12.0`.
+  On those versions, raise the Pod targets in the exported Podfile's `post_install` block and
+  re-run `pod install` (see the Unity troubleshooting page).
+- Packages are built and the Release gates run on Unity **6000.0.85f1** (was 6000.0.73f1).
+  Both Editors ship the same Roslyn compiler; 1.6.1 rebuilt with 85f1 matches the published
+  packages byte for byte apart from the `compilerUnity` provenance field.
+
 ## [1.6.1] — 2026-10-12
 
 - Move the Editor runtime facade and AdMob runtime DLLs out of Unity's reserved
