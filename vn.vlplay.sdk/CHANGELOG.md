@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.6.4] — 2026-11-04
+
+- Compile the Play Mode mock only in Unity Editor assemblies. Player DLLs omit the
+  mock even when IL2CPP preserves the SDK assembly.
+
 ## [1.6.3] — 2026-10-31
 
 - iOS: remove only complete duplicated static-framework linker arguments in the generated
